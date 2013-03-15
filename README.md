@@ -1,7 +1,5 @@
 # Shellate
 
-[![Build Status](https://travis-ci.org/killdream/shellate.png)](https://travis-ci.org/killdream/shellate)
-
 Templating for Shell scripts.
 
 
