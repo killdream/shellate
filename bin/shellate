@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+(function(){
+  var doc, ref$, read, readAll, replace, print, shellate, docopt, pkgMeta;
+  doc = 'Shellate --- Templating for shell scripts.\n\nUsage:\n  shellate <files>...\n  shellate [<in] [>out]\n  shellate -h | --help\n  shellate --version\n\nOptions:\n  -h, --help              Displays this screen and exits.\n  -v, --version           Display the version and exits.';
+  ref$ = require('../'), read = ref$.read, readAll = ref$.readAll, replace = ref$.replace;
+  print = require('util').print;
+  shellate = compose$([print, replace]);
+  docopt = require('docopt').docopt;
+  pkgMeta = require('../package');
+  (function(args){
+    var ref$;
+    switch (false) {
+    case !((ref$ = args['<files>']) != null && ref$.length):
+      shellate(readAll(args['<files>']));
+      break;
+    default:
+      shellate(read('/dev/stdin'));
+    }
+  }.call(this, docopt(doc, {
+    version: pkgMeta.version
+  })));
+  function compose$(fs){
+    return function(){
+      var i, args = arguments;
+      for (i = fs.length; i > 0; --i) { args = [fs[i-1].apply(this, args)]; }
+      return args[0];
+    };
+  }
+}).call(this);
