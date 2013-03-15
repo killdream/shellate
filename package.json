@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Templating for Shell scripts.",
   "main": "./lib/index.js",
+  "bin": "./bin/shellate",
   "devDependencies": {
     "LiveScript": "~1.1.1",
     "mocha": "~1.8.1"
@@ -19,6 +20,11 @@
     "type": "git",
     "url": "git://github.com/killdream/shellate.git"
   },
+  "keywords": [
+    "templating",
+    "shell",
+    "shell scripting"
+  ],
   "author": "Quildreen \"Sorella\" Motta <quildreen@gmail.com>",
   "license": "MIT",
   "readmeFilename": "README.md",
