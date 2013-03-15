@@ -40,7 +40,7 @@ doc = '''
       '''
 
 ### -- Dependencies ----------------------------------------------------
-{read, read-all, replace} = require '../src'
+{read, read-all, replace} = require '../'
 {print}                   = require 'util'
 
 
