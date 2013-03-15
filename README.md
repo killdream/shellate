@@ -11,11 +11,11 @@ Templating for Shell scripts.
 # Just give it some files
 $ echo "There's no place like {:HOME}" > template
 $ shellate template
-There's no place like /home/queen
+# => There's no place like /home/queen
 
 # Or pipe it through the STDIN like a boss
 $ echo "There's no place like {:HOME}" | shellate
-There's no place like /home/queen
+# => There's no place like /home/queen
 ``` 
 
 
