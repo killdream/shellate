@@ -1,6 +1,6 @@
 {
   "name": "shellate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Templating for Shell scripts.",
   "main": "./lib/index.js",
   "bin": "./bin/shellate",
@@ -31,6 +31,16 @@
   "calliope": {
     "output": "docs/api",
     "copyright": "© $(date +%Y) Quildree \"Sorella\" Motta",
-    "packages": [{ "files": [ "src/*.ls" ] }]
+    "packages": [
+      {
+        "files": [
+          "src/*.ls"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "docopt": "~0.4.0",
+    "spice": "~0.1.1"
   }
 }
